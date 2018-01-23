@@ -6,3 +6,5 @@ This repository contains the same simple application written using
 * jQuery
 * Vue.js
 * React
+
+Each of the examples uses Ajax. You will to run them on a web server.
