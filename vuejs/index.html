@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>VuewJS EXample</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+
+<body>
+<div id="app-7">
+  <ul>
+    <country-item
+      v-for="country in countries"
+      v-bind:country="country"
+      v-bind:key="country.id"
+      v-on:showcountrydetails="show(country)">
+    </country-item>
+  </ul>
+  <div><country-details v-bind:showinfo="showinfo" v-bind:country="countries[chosencountry]"></country-details></div>
+</div>
+
+	<script src="vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.5"></script>
+	<script src="myjs.js"></script>
+</body>
+</html>

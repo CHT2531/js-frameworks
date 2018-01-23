@@ -1,0 +1,22 @@
+[
+	{
+		"name":"England",
+		"capital":"London",
+		"population":61000000
+	},
+	{
+		"name":"France",
+		"capital":"Paris",
+		"population":65000000
+	},	
+	{
+		"name":"Germany",
+		"capital":"Berlin",
+		"population":80000000
+	},
+	{
+		"name":"USA",
+		"capital":"Washington",
+		"population":321000000
+	}
+]
