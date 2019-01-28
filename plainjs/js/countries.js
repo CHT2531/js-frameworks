@@ -1,8 +1,8 @@
 
-var ajax=function(url,success)
+function ajax(url,success)
 {
-	var ajaxRequest = new XMLHttpRequest(); 
-	var handleResponse=function()
+	const ajaxRequest = new XMLHttpRequest(); 
+	function handleResponse()
 	{
 		if(ajaxRequest.readyState===4)
 		{
@@ -19,23 +19,22 @@ var ajax=function(url,success)
 }
 
 
-var navList;
-var contentDiv;
+const navList=document.getElementById("nav");
+const titleH2=document.getElementById("title");
+const infoP=document.getElementById("info");
 function createHandler(country)
 {
 	return function(){
-		contentDiv.innerHTML="<h2>"+country.name+"</h2><p>The capital city of "+country.name+" is "+country.capital+". "+country.name+" has a population of "+country.population+".</p>";
+		titleH2.textContent=country.name;
+		infoP.textContent=`The capital city of ${country.name} is ${country.capital}. ${country.name} has a population of ${country.population}.`;
 	}
 }
 
 function populateList(countries)
 {
-	navList=document.getElementById("nav");
-	contentDiv=document.getElementById("content");
-
 	countries.forEach(function(country){
 		var newLi=document.createElement("li");
-		newLi.innerHTML=country.name;
+		newLi.textContent=country.name;
 	    newLi.addEventListener("click", createHandler(country), false)
 		navList.appendChild(newLi);
 	})
